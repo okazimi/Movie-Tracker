@@ -10,7 +10,7 @@ import requests
 app = Flask(__name__)
 
 # INITIALIZE BOOTSTRAP
-app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
+app.config['SECRET_KEY'] = 'secret key'
 Bootstrap(app)
 
 # INITIALIZE DATABASE
