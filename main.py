@@ -59,7 +59,7 @@ def home():
 def add():
     form = AddMovie()
     if form.validate_on_submit():
-        response = requests.get(f"https://api.themoviedb.org/3/search/movie?api_key=6de1ab1d28d2850b4dd84e78a8f44c35&query={form.movie_title.data}")
+        response = requests.get(f"https://api.themoviedb.org/3/search/movie?api_key=HEHEHEHE&query={form.movie_title.data}")
         movie_results = response.json()["results"]
         return render_template('select.html', movie_results=movie_results)
     return render_template("add.html", form=form)
@@ -90,7 +90,7 @@ def delete(index):
 # UPDATE DATABASE TO INCLUDE SELECTED MOVIE
 @app.route("/update/<int:movie_id>")
 def update(movie_id):
-    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=6de1ab1d28d2850b4dd84e78a8f44c35&language=en-US")
+    response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=HEHEHEHEHEHEHEH&language=en-US")
     movie = Movie(
         title=response.json()["original_title"],
         description=response.json()["overview"],
